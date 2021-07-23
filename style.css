@@ -15,12 +15,14 @@
 
 body {
   font-family: 'Kumbh Sans', sans-serif;
-  min-height: 100vh;
+  height: 100vh;
   display: -ms-grid;
   display: grid;
   place-items: center;
   font-size: 18px;
   background: var(--background-color);
+  position: relative;
+  overflow: hidden;
 }
 
 p {
@@ -53,6 +55,7 @@ hr {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
 
 .details {
@@ -107,12 +110,28 @@ hr {
   font-size: 13px;
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
+.top-image, .bottom-image {
+  position: absolute;
+  z-index: -1;
 }
 
-.attribution a {
-  color: #3e52a3;
+.top-image {
+  left: -14%;
+  top: -75%;
+}
+
+.bottom-image {
+  top: 44%;
+  left: 41%;
+}
+
+@media screen and (max-width: 376px) {
+  .top-image {
+    left: -42%;
+    top: -16%;
+  }
+  .bottom-image {
+    top: 64%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
