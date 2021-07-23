@@ -9,8 +9,8 @@
 :root {
   --background-color: hsl(185, 75%, 39%);
   --heading-color: hsl(229, 23%, 23%);
-  --font-color: hsl(227, 10%, 46%);
-  --sub-heading-color: hsl(0, 0%, 59%);
+  --sub-heading-color: hsl(227, 10%, 46%);
+  --spacing-color: hsl(0, 0%, 59%);
 }
 
 body {
@@ -23,15 +23,22 @@ body {
   background: var(--background-color);
 }
 
-h1,
-h2,
-h3,
 p {
   margin: 0;
+  color: var(--heading-color);
+}
+
+span {
+  color: var(--sub-heading-color);
 }
 
 img {
   max-width: 100%;
+}
+
+hr {
+  border: 0.1px solid var(--spacing-color);
+  width: 100%;
 }
 
 .card {
@@ -46,6 +53,58 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.details {
+  position: relative;
+  margin-bottom: 0.7em;
+}
+
+.profile-image {
+  position: absolute;
+  border-radius: 50%;
+  left: 33%;
+  top: -2.5em;
+  border: 0.3em solid white;
+}
+
+.detail {
+  margin: 4.5em 0 0 0;
+  text-align: center;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+.detail span {
+  font-weight: 400;
+}
+
+.detail .address {
+  display: block;
+  font-size: 13px;
+}
+
+.stats-info {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-columns: 3;
+          columns: 3;
+  gap: 1em;
+}
+
+.stats-info .stats {
+  padding: 1.5em;
+  text-align: center;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+.stats-info .stats span {
+  display: block;
+  font-weight: 400;
+  font-size: 13px;
 }
 
 .attribution {
